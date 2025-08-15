@@ -1,11 +1,14 @@
-name: Cost of Equity Calculator
-description: Retrieves cost of equity data from the Marktrendite API. Returns data for all companies or filters by ISIN code.
-inputs:
-  - name: isin
-    type: string
-    description: Optional ISIN code to filter for a specific company (e.g., US0378331005 for Apple). Leave empty to get summary of all companies.
-    required: false
-outputs:
-  - name: result
-    type: string
-    description: Cost of equity information including weighted, DDM, and RIM calculations
+name: hello-mcp
+description: Minimal FastMCP server in Python
+# How Smithery should start your server
+startCommand:
+  type: stdio
+  command: ["python", "server.py"]
+
+# Optional: declare configuration your server accepts
+# configSchema:
+#   type: object
+#   properties:
+#     api_key:
+#       type: string
+#   required: []
