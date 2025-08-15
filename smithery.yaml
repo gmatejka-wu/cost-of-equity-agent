@@ -1,0 +1,16 @@
+name: Cost of Equity Calculator
+description: Calculates the cost of equity for a company using the Marktrendite API.
+inputs:
+  - name: ticker
+    type: string
+    description: The company ticker symbol (e.g., AAPL)
+  - name: country
+    type: string
+    description: The country where the company is based (e.g., US)
+  - name: industry
+    type: string
+    description: The industry sector (e.g., Technology)
+outputs:
+  - name: result
+    type: string
+    description: The result message
