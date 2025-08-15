@@ -21,3 +21,9 @@ startCommand:
         DEBUG: config.debug ? 'true' : 'false'
       }
     })
+
+# Add this to fix the scan error
+testProfiles:
+  default:
+    config:
+      debug: false
