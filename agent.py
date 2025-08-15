@@ -1,8 +1,13 @@
-def run(inputs, context):
-    isin = inputs.get("isin", "")
-    
-    # Test with mock data to verify deployment works
-    if isin:
-        return {"result": f"Test successful for ISIN: {isin}"}
-    else:
-        return {"result": "Test deployment successful - agent is working"}
+# server.py
+from fastmcp import FastMCP
+
+mcp = FastMCP("HelloServer")
+
+@mcp.tool
+def greet(name: str) -> str:
+    """Return a friendly greeting."""
+    return f"Hello, {name}!"
+
+if __name__ == "__main__":
+    # Expose the server via STDIO (what Smithery expects)
+    mcp.run()
