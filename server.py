@@ -1,4 +1,3 @@
-# server.py
 from fastmcp import FastMCP
 
 mcp = FastMCP("HelloServer")
@@ -9,5 +8,5 @@ def greet(name: str) -> str:
     return f"Hello, {name}!"
 
 if __name__ == "__main__":
-    # Expose the server via STDIO (what Smithery expects)
+    # IMPORTANT: keeps the process alive and speaks over STDIO
     mcp.run()
