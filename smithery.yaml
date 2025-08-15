@@ -1,5 +1,6 @@
 name: hello-mcp
 description: Minimal FastMCP server in Python
+# Let Smithery start a long-running process that speaks MCP over STDIO
 startCommand:
   type: stdio
   command: ["python", "server.py"]
