@@ -1,10 +1,6 @@
 .git
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
 .env
-.wheels
 dist
 build
-.notebooks/
