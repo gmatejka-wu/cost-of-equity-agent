@@ -1,6 +1,23 @@
-name: hello-mcp
-description: Minimal FastMCP server in Python
-# Let Smithery start a long-running process that speaks MCP over STDIO
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+build:
+  dockerBuildPath: .
+
 startCommand:
   type: stdio
-  command: ["python", "server.py"]
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    properties:
+      debug:
+        type: boolean
+        description: Enable debug mode
+        default: false
+  commandFunction: |
+    (config) => ({
+      command: 'python',
+      args: ['main.py'],
+      env: {
+        DEBUG: config.debug ? 'true' : 'false'
+      }
+    })
