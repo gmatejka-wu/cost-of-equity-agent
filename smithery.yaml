@@ -1,16 +1,11 @@
 name: Cost of Equity Calculator
-description: Calculates the cost of equity for a company using the Marktrendite API.
+description: Retrieves cost of equity data from the Marktrendite API. Returns data for all companies or filters by ISIN code.
 inputs:
-  - name: ticker
+  - name: isin
     type: string
-    description: The company ticker symbol (e.g., AAPL)
-  - name: country
-    type: string
-    description: The country where the company is based (e.g., US)
-  - name: industry
-    type: string
-    description: The industry sector (e.g., Technology)
+    description: Optional ISIN code to filter for a specific company (e.g., US0378331005 for Apple). Leave empty to get summary of all companies.
+    required: false
 outputs:
   - name: result
     type: string
-    description: The result message
+    description: Cost of equity information including weighted, DDM, and RIM calculations
