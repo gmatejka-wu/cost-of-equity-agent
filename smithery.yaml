@@ -1,14 +1,5 @@
 name: hello-mcp
 description: Minimal FastMCP server in Python
-# How Smithery should start your server
 startCommand:
   type: stdio
   command: ["python", "server.py"]
-
-# Optional: declare configuration your server accepts
-# configSchema:
-#   type: object
-#   properties:
-#     api_key:
-#       type: string
-#   required: []
