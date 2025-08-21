@@ -3,6 +3,13 @@
 MarktTrendite API MCP Server
 This server provides information about the marktrendite.ai CostofEquity API variables
 and can fetch cost of equity data for analysis.
+
+Prompts:
+Resources:
+Tools:
+
+https://modelcontextprotocol.io/specification/2025-06-18/server/prompts
+
 """
 
 import asyncio
